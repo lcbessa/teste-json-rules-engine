@@ -1,4 +1,4 @@
-import { checkEmailInDatabase } from "../utils/emailDatabase.js";
+import { checkEmailInDatabase } from "../utils/EmailDatabase.js";
 
 // Define o fato `emailExists`
 const emailFact = async (params, almanac) => {
