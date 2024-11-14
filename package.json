@@ -1,0 +1,20 @@
+{
+  "name": "teste-json-rules-engine",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "keywords": [],
+  "author": "Luiz Carlos Bessa de Lima",
+  "license": "ISC",
+  "dependencies": {
+    "json-rules-engine": "^7.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4",
+    "sucrase": "^3.35.0"
+  }
+}
