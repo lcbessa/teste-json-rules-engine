@@ -5,7 +5,7 @@ const emailRule = {
       {
         fact: "emailExiste",
         operator: "equal",
-        value: false, // Queremos que `emailExists` seja falso para indicar que o e-mail é único
+        value: false, // Queremos que `emailExiste` seja falso para indicar que o e-mail é único
       },
     ],
   },

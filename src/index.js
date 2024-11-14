@@ -25,3 +25,4 @@ engine.on("failure", async (event, almanac) => {
 
 // Executa o motor com o e-mail a ser verificado
 engine.run({ email: "user1@example.com" });
+engine.run({ email: "user@example.com" });
