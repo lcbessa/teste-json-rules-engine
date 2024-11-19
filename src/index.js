@@ -1,28 +1,12 @@
-// import { conditions, event } from "./rules/EmailRules";
-import { Engine } from "json-rules-engine";
-import emailRule from "./rules/EmailRule";
-import emailFact from "./facts/EmailFact";
+// src/index.js
+import express from "express";
+import { processRules } from "./controllers/RulesController.js";
 
-//Cria o motor de regras
-const engine = new Engine();
+const app = express();
+app.use(express.json());
 
-// engine.addRule({ conditions, event });
-engine.addRule(emailRule);
-engine.addFact("emailExiste", emailFact);
+app.post("/rules", processRules);
 
-//Subscrição para sucesso
-engine.on("success", (event, almanac) => {
-  if (event.type === "emailUnico") {
-    console.log(event.params.message);
-  }
-});
-
-// Subscrição para falha
-engine.on("failure", async (event, almanac) => {
-  const email = await almanac.factValue("email");
-  console.log(`O e-mail ${email} já está em uso.`);
-});
-
-// Executa o motor com o e-mail a ser verificado
-engine.run({ email: "user1@example.com" });
-engine.run({ email: "user@example.com" });
+const PORT = 7000;
+console.log(`Servidor rodando no link http://localhost:${PORT}`);
+app.listen(PORT);

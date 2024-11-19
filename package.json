@@ -11,6 +11,8 @@
   "author": "Luiz Carlos Bessa de Lima",
   "license": "ISC",
   "dependencies": {
+    "axios": "^1.7.7",
+    "express": "^4.21.1",
     "json-rules-engine": "^7.0.0"
   },
   "devDependencies": {
